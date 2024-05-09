@@ -10,7 +10,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 // Instalar las dependencias de tu proyecto, por ejemplo, usando npm
-                sh 'npm install'
+                sh 'npm i'
             }
         }
         stage('Build') {
