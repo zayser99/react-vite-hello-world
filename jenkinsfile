@@ -24,6 +24,10 @@ pipeline {
         }
         stage('Copy to specified directory') {
             steps {
+
+                // Borrar archivos existentes en el directorio destino
+                sh 'rm -rf /var/www/html/reactvite/*'
+
                 // Copiar el resultado del build a una ruta específica
                 sh 'mkdir -p /var/www/html/reactvite'
                 sh 'cp -r dist/* /var/www/html/reactvite'
